@@ -21,7 +21,7 @@
                 </div>
                 <div class="footer-contacts__email">
                   <div class="footer-contacts__email-icon"></div>
-                  <?php the_field('theme_email', 'options') ?>info@ozkd.ru
+                  <?php the_field('theme_email', 'options') ?>
                 </div>
               </div>
             </div>
