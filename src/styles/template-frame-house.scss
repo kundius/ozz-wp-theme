@@ -1,0 +1,185 @@
+.frame-house-content {
+  color: #4e4e53;
+  font-size: 29px;
+  line-height: 36px;
+  margin-bottom: 54px;
+
+  @include below(md) {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+}
+
+.frame-house-row + .frame-house-row {
+  margin-top: 40px;
+
+  @include below(sm) {
+    margin-top: 20px;
+  }
+}
+
+.frame-house-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-top: -15px;
+
+  @include below(sm) {
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+}
+
+.frame-house-layout__left {
+  padding-left: 15px;
+  padding-top: 15px;
+  width: 50%;
+
+  @include below(md) {
+    width: 100%;
+  }
+  @include below(sm) {
+    padding-left: 8px;
+    padding-top: 8px;
+  }
+}
+
+.frame-house-layout__right {
+  padding-left: 15px;
+  padding-top: 15px;
+  width: 50%;
+
+  @include below(md) {
+    width: 100%;
+  }
+  @include below(sm) {
+    padding-left: 8px;
+    padding-top: 8px;
+  }
+}
+
+.frame-house-image {
+  display: flex;
+}
+
+.frame-house-image img {
+  display: block;
+  width: 100%;
+}
+
+.frame-house-details {
+  border: 3px solid #9b9ba2;
+}
+
+.frame-house-details__title {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 30px;
+  background-color: #9b9ba2;
+  padding: 2px 17px 5px;
+
+  @include below(sm) {
+    font-size: 15px;
+    line-height: 1;
+    padding: 1px 7px 3px;
+  }
+}
+
+.frame-house-details__desc {
+  color: #4e4e53;
+  font-size: 23px;
+  line-height: 30px;
+  padding: 0px 17px 4px;
+
+  @include below(sm) {
+    font-size: 15px;
+    line-height: 1;
+    padding: 1px 7px 3px;
+  }
+}
+
+.frame-house-files {
+  margin-top: 4px;
+
+  @include below(sm) {
+    margin-top: 3px;
+  }
+}
+
+.frame-house-file {
+  position: relative;
+  border: 3px solid #e16c19;
+  display: flex;
+  align-items: center;
+  padding: 18px 14px;
+
+  @include below(sm) {
+    padding: 8px;
+  }
+}
+
+.frame-house-file + .frame-house-file {
+  margin-top: 4px;
+
+  @include below(sm) {
+    margin-top: 3px;
+  }
+}
+
+.frame-house-file__icon {
+  width: 48px;
+  height: 48px;
+  margin-top: -12px;
+  margin-bottom: -12px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+
+  @include below(sm) {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+  }
+}
+
+.frame-house-file__icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.frame-house-file__name {
+  display: block;
+  color: #4e4e53;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include below(sm) {
+    font-size: 15px;
+  }
+}
+
+.frame-house-file__name::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}

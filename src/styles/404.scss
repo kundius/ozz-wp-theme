@@ -1,0 +1,154 @@
+.page-404-main {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d5c97 url('../images/bg-404.png') no-repeat 50% 100%;
+  padding-top: 88px;
+  padding-bottom: 220px;
+
+  @media (min-width: 1920px) {
+    background-position: 100% 100%;
+  }
+
+  @include below(sm) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-size: auto 200px;
+  }
+}
+
+.page-404-header {
+  display: flex;
+  align-items: flex-end;
+
+  @include below(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.page-404-header__logo {
+  margin-right: 30px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @include below(sm) {
+    margin: 0;
+  }
+}
+
+.page-404-header__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.388);
+  line-height: 22px;
+  letter-spacing: 0.1em;
+
+  @include below(sm) {
+    margin-top: 20px;
+  }
+}
+
+.page-404-code {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 73px;
+
+  @include below(sm) {
+    margin-top: 40px;
+  }
+}
+
+.page-404-code__number {
+  font-weight: 100;
+  font-size: 92px;
+  line-height: 1;
+  color: #fff;
+
+  @include below(sm) {
+    font-size: 72px;
+  }
+}
+
+.page-404-code__desc {
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: .3em;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 18px 0 0 14px;
+
+  @include below(sm) {
+    margin-top: 10px;
+  }
+}
+
+.page-404-desc {
+  margin-top: 55px;
+  width: 600px;
+  max-width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  color: #fff;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.149);
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgb(250, 175, 0);
+    }
+  }
+
+  @include below(sm) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.page-404-phone {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 600px;
+  max-width: 100%;
+}
+
+.page-404-phone__label {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-right: 16px;
+}
+
+.page-404-phone__number {
+  font-size: 20px;
+  color: #f9f9f9;
+  letter-spacing: 0.01em;
+  line-height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(250, 175, 0);
+  }
+}

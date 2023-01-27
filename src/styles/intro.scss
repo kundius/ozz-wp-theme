@@ -1,0 +1,73 @@
+.intro {
+  position: relative;
+  background: url('../images/intro.jpg') no-repeat 50% 100%;
+  background-size: cover;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  height: 17px;
+  background-color: #e16c19;
+  opacity: 0.44;
+  top: 8px;
+  left: 0;
+  right: 0;
+}
+
+.intro__container {
+  height: 412px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+
+  @include below(md) {
+    align-items: center;
+    height: 261px;
+    padding-top: 24px;
+  }
+  @include below(sm) {
+    height: 161px;
+    padding-top: 12px;
+  }
+}
+
+.intro__title {
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  @include below(md) {
+    text-align: center;
+    font-size: 60px;
+  }
+  @include below(sm) {
+    font-size: 36px;
+  }
+}
+
+.intro__desc {
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 35px;
+  letter-spacing: -0.005em;
+
+  @include below(md) {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 36px;
+  }
+  @include below(sm) {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 6px;
+  }
+}

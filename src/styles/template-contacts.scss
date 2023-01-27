@@ -1,0 +1,280 @@
+.contacts {
+  // margin-bottom: 200px
+}
+
+.contacts-address {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-address__icon {
+  align-self: flex-start;
+  background: url('../images/icon-address.png') no-repeat 50% 50%;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  @include below(sm) {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+}
+
+.contacts-address__body {
+  flex-grow: 1;
+}
+
+.contacts-address__label {
+  color: #4e4e53;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
+}
+
+.contacts-address__value {
+  color: #4e4e53;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+
+  @include below(sm) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+}
+
+.contacts-map {
+  margin-top: 24px;
+
+  @include below(sm) {
+    margin-top: 8px;
+  }
+}
+
+.contacts-columns {
+}
+
+.contacts-phone {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  @include below(sm) {
+    margin-top: 16px;
+  }
+}
+
+.contacts-phone__icon {
+  align-self: flex-start;
+  background: url('../images/icon-phone.png') no-repeat 50% 50%;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  @include below(sm) {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+}
+
+.contacts-phone__body {
+  flex-grow: 1;
+}
+
+.contacts-phone__label {
+  color: #4e4e53;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.0125em;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
+}
+
+.contacts-phone__value {
+  color: #4e4e53;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+  letter-spacing: 0.025em;
+
+  @include below(sm) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+  }
+}
+
+.contacts-email {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
+  @include below(sm) {
+    margin-top: 14px;
+  }
+}
+
+.contacts-email__icon {
+  align-self: flex-start;
+  background: url('../images/icon-email.png') no-repeat 50% 50%;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  @include below(sm) {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+}
+
+.contacts-email__body {
+  flex-grow: 1;
+}
+
+.contacts-email__label {
+  color: #4e4e53;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
+}
+
+.contacts-email__value {
+  color: #4e4e53;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+
+  @include below(sm) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+  }
+}
+
+.contacts-columns {
+  display: flex;
+  justify-content: space-between;
+
+  @include below(md) {
+    flex-direction: column;
+  }
+}
+
+.contacts-column {
+
+}
+
+.contacts-schedule {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+
+  @include below(sm) {
+    margin-top: 20px;
+  }
+}
+
+.contacts-schedule__icon {
+  align-self: flex-start;
+  background: url('../images/icon-schedule.png') no-repeat 50% 50%;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  @include below(sm) {
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
+  }
+}
+
+.contacts-schedule__body {
+  flex-grow: 1;
+}
+
+.contacts-schedule__label {
+  color: #4e4e53;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  @include below(sm) {
+    font-size: 18px;
+  }
+}
+
+.contacts-schedule__value {
+  font-size: 30px;
+  line-height: 30px;
+  color: #4e4e53;
+  margin-top: 5px;
+
+  @include below(sm) {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.contacts-schedule__value-date {
+  font-weight: 500;
+  color: #e16c19;
+  letter-spacing: 0.025em;
+}
+
+.contacts-schedule__value-time {
+  margin-top: 5px;
+  margin-bottom: 2px;
+
+  @include below(sm) {
+    margin-top: 2px;
+  }
+}
+
+.contacts-note {
+  color: #4e4e53;
+  font-size: 30px;
+  line-height: 30px;
+  margin-top: 40px;
+
+  @include below(md) {
+    font-size: 24px;
+    margin-top: 32px;
+  }
+  @include below(sm) {
+    font-size: 16px;
+    margin-top: 22px;
+    text-align: center;
+    line-height: 18px;
+  }
+}
