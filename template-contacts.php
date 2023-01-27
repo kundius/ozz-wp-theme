@@ -33,6 +33,10 @@ Template Name: Контакты
               <?php the_field('map') ?>
             </div>
 
+            <div class="contacts-yandexnavi">
+              <a href="yandexnavi://build_route_on_map?lat_to=54.883053&lon_to=38.603098" target="_blank">Открыть в яндекс навигаторе</a>
+            </div>
+
             <div class="contacts-columns">
               <div class="contacts-column">
                 <div class="contacts-phone">

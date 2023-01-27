@@ -61,6 +61,26 @@
   }
 }
 
+.contacts-yandexnavi {
+  margin-top: 24px;
+
+  @include below(sm) {
+    margin-top: 8px;
+  }
+}
+
+.contacts-yandexnavi a {
+  display: inline-block;
+  line-height: 1;
+  font-size: 18px;
+  padding: 12px 24px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background: #e16c19;
+  border-radius: 6px;
+}
+
 .contacts-columns {
 }
 
