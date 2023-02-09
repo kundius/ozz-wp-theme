@@ -21,9 +21,11 @@ Template Name: Подрядчики
           </h1>
 
           <div class="contractors">
+            <?php if ($title = get_field('title')): ?>
             <div class="contractors__title">
-              Подрядчики прошедшие обучение по монтажу
+              <?php echo $title ?>
             </div>
+            <?php endif; ?>
 
             <?php if ($contractors = get_field('contractors')): ?>
               <div class="contractors-table">
