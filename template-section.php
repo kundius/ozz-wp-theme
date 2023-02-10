@@ -51,6 +51,51 @@ $sections = new WP_Query([
             <?php the_content() ?>
           </div>
 
+          <?php if ($sections->have_posts()): ?>
+          <div class="catalog-list">
+            <?php while ($sections->have_posts()): $sections->the_post(); ?>
+              <div class="catalog-list__cell">
+                <div class="catalog-item">
+                  <?php if (has_post_thumbnail()): ?>
+                    <div class="catalog-item__image">
+                      <a href="<?php the_permalink() ?>">
+                        <?php the_post_thumbnail('theme-medium'); ?>
+                      </a>
+                    </div>
+                  <?php endif; ?>
+                  <div class="catalog-item__body">
+                    <a href="<?php the_permalink() ?>" class="catalog-item__name">
+                      <?php the_title() ?>
+                    </a>
+                    <div class="catalog-item__desc">
+                      <?php the_excerpt() ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endwhile; ?>
+          </div>
+          <?php endif; wp_reset_query(); ?>
+
+          <?php if ($filelist = get_field('filelist')): ?>
+            <div class="catallog-file-list">
+              <div class="file-list">
+                <?php foreach ($filelist as $item): ?>
+                  <div class="file-item">
+                    <?php if ($item['icon']): ?>
+                      <div class="file-item__icon">
+                        <img src="<?php echo $item['icon']['url'] ?>" />
+                      </div>
+                    <?php endif; ?>
+                    <a href="<?php echo $item['file']['url'] ?>" class="file-item__name" target="_blank">
+                      <?php echo $item['name'] ?>
+                    </a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
           <?php if ($frameHouses->have_posts()): ?>
           <div class="frame-house">
             <?php while ($frameHouses->have_posts()): $frameHouses->the_post(); ?>
@@ -104,32 +149,6 @@ $sections = new WP_Query([
                           загрузить 3D модель sketchup
                         </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <?php endwhile; ?>
-          </div>
-          <?php endif; wp_reset_query(); ?>
-
-          <?php if ($sections->have_posts()): ?>
-          <div class="catalog-list">
-            <?php while ($sections->have_posts()): $sections->the_post(); ?>
-              <div class="catalog-list__cell">
-                <div class="catalog-item">
-                  <?php if (has_post_thumbnail()): ?>
-                    <div class="catalog-item__image">
-                      <a href="<?php the_permalink() ?>">
-                        <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
-                      </a>
-                    </div>
-                  <?php endif; ?>
-                  <div class="catalog-item__body">
-                    <a href="<?php the_permalink() ?>" class="catalog-item__name">
-                      <?php the_title() ?>
-                    </a>
-                    <div class="catalog-item__desc">
-                      <?php the_excerpt() ?>
                     </div>
                   </div>
                 </div>
