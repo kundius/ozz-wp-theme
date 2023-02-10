@@ -26,7 +26,6 @@ $sections = new WP_Query([
    ]
  ]
 ]);
-print_r($frameHouses);
 ?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes();?> itemscope itemtype="http://schema.org/WebSite">
@@ -49,61 +48,85 @@ print_r($frameHouses);
             <?php the_content() ?>
           </div>
 
-          <?php if ($frameHouse = get_field('frame-house')): ?>
-            <div class="frame-house">
-              <?php foreach ($frameHouse as $item): ?>
-                <div class="frame-house-row">
-                  <div class="frame-house-layout">
-                    <?php if ($item['image']): ?>
-                      <div class="frame-house-layout__left">
-                        <div class="frame-house-image">
-                          <img src="<?php echo $item['image']['url'] ?>" />
-                        </div>
+          <?php if ($frameHouse->have_posts()): ?>
+          <div class="frame-house">
+            <?php while ($frameHouse->have_posts()): $frameHouse->the_post(); ?>
+              <div class="frame-house-row">
+                <div class="frame-house-layout">
+                  <?php if (has_post_thumbnail()): ?>
+                    <div class="frame-house-layout__left">
+                      <div class="frame-house-image">
+                        <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
                       </div>
-                    <?php endif; ?>
+                    </div>
+                  <?php endif; ?>
 
-                    <div class="frame-house-layout__right">
-                      <div class="frame-house-details">
-                        <div class="frame-house-details__title">
-                          <?php echo $item['title'] ?>
-                        </div>
-                        <div class="frame-house-details__desc">
-                          <?php echo $item['desc'] ?>
-                        </div>
+                  <div class="frame-house-layout__right">
+                    <div class="frame-house-details">
+                      <a href="<?php the_permalink() ?>" class="frame-house-details__title">
+                        <?php the_title() ?>
+                      </a>
+                      <div class="frame-house-details__desc">
+                        <?php echo $item['desc'] ?>
                       </div>
+                    </div>
 
-                      <div class="frame-house-files">
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
-                          </div>
-                          <a href="<?php echo $item['specification']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить спецификацию
-                          </a>
+                    <div class="frame-house-files">
+                      <div class="frame-house-file">
+                        <div class="frame-house-file__icon">
+                          <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
                         </div>
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
-                          </div>
-                          <a href="<?php echo $item['estimate']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить смету
-                          </a>
+                        <a href="<?php the_field('specification'); ?>" class="frame-house-file__name" target="_blank">
+                          загрузить спецификацию
+                        </a>
+                      </div>
+                      <div class="frame-house-file">
+                        <div class="frame-house-file__icon">
+                          <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
                         </div>
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-model.png" />
-                          </div>
-                          <a href="<?php echo $item['model']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить 3D модель sketchup
-                          </a>
+                        <a href="<?php the_field('estimate'); ?>" class="frame-house-file__name" target="_blank">
+                          загрузить смету
+                        </a>
+                      </div>
+                      <div class="frame-house-file">
+                        <div class="frame-house-file__icon">
+                          <img src="/wp-content/uploads/2023/01/icon-model.png" />
                         </div>
+                        <a href="<?php the_field('model'); ?>" class="frame-house-file__name" target="_blank">
+                          загрузить 3D модель sketchup
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-              <?php endforeach; ?>
-            </div>
-          <?php endif; ?>
+              </div>
+            <?php endwhile; ?>
+          </div>
+          <?php endif; wp_reset_query(); ?>
+
+          <?php if ($sections->have_posts()): ?>
+          <div class="catalog-list">
+            <?php while ($sections->have_posts()): $sections->the_post(); ?>
+              <div class="catalog-list__cell">
+                <div class="catalog-item">
+                  <?php if (has_post_thumbnail()): ?>
+                    <div class="catalog-item__image">
+                      <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                    </div>
+                  <?php endif; ?>
+                  <div class="catalog-item__body">
+                    <a href="<?php the_permalink() ?>" class="catalog-item__name">
+                      <?php the_title() ?>
+                    </a>
+                    <div class="catalog-item__desc">
+                      <?php the_excerpt() ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php endwhile; ?>
+          </div>
+          <?php endif; wp_reset_query(); ?>
         </div>
       </div>
 
