@@ -71,6 +71,15 @@ class Acf implements Service
               'category'          => 'formatting',
               'keywords'          => array('frame-house', 'quote'),
             ));
+            acf_register_block_type(array(
+              'name'              => 'sections',
+              'mode'              => 'edit',
+              'title'             => __('Sections'),
+              'description'       => __('A custom frame house block.'),
+              'render_template'   => 'partials/block/content-sections.php',
+              'category'          => 'formatting',
+              'keywords'          => array('sections', 'quote'),
+            ));
           }
         });
     }
