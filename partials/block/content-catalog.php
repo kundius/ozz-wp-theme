@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <?php if ($files = get_field('files')): ?>
+        <?php if ($files = $item['files']): ?>
         <div class="frame-house-files">
           <?php foreach ($files as $file): ?>
           <div class="frame-house-file">
