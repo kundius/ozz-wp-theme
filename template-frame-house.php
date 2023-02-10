@@ -24,61 +24,62 @@ Template Name: Каркасные дома
             <?php the_content() ?>
           </div>
 
-          <?php if ($frameHouse = get_field('frame-house')): ?>
-            <div class="frame-house">
-              <?php foreach ($frameHouse as $item): ?>
-                <div class="frame-house-row">
-                  <div class="frame-house-layout">
-                    <?php if ($item['image']): ?>
-                      <div class="frame-house-layout__left">
-                        <div class="frame-house-image">
-                          <img src="<?php echo $item['image']['url'] ?>" />
-                        </div>
-                      </div>
-                    <?php endif; ?>
+          <div class="frame-house">
+            <div class="frame-house-row">
+              <div class="frame-house-layout">
+                <?php if (has_post_thumbnail()): ?>
+                  <div class="frame-house-layout__left">
+                    <div class="frame-house-image">
+                      <a href="<?php the_permalink() ?>">
+                        <?php the_post_thumbnail('theme-medium'); ?>
+                      </a>
+                    </div>
+                  </div>
+                <?php endif; ?>
 
-                    <div class="frame-house-layout__right">
-                      <div class="frame-house-details">
-                        <div class="frame-house-details__title">
-                          <?php echo $item['title'] ?>
-                        </div>
-                        <div class="frame-house-details__desc">
-                          <?php echo $item['desc'] ?>
-                        </div>
-                      </div>
+                <div class="frame-house-layout__right">
+                  <div class="frame-house-details">
+                    <a href="<?php the_permalink() ?>" class="frame-house-details__title">
+                      <?php the_title() ?>
+                    </a>
+                    <div class="frame-house-details__desc">
+                      Высота потолка <?php the_field('ceiling_height'); ?> м<br />
+                      Площадь застройки <?php the_field('building_area'); ?> м²<br />
+                      Площадь помещений <?php the_field('premises_area'); ?> м²<br />
+                      Код продукта <?php the_field('product_code'); ?>
+                    </div>
+                  </div>
 
-                      <div class="frame-house-files">
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
-                          </div>
-                          <a href="<?php echo $item['specification']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить спецификацию
-                          </a>
-                        </div>
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
-                          </div>
-                          <a href="<?php echo $item['estimate']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить смету
-                          </a>
-                        </div>
-                        <div class="frame-house-file">
-                          <div class="frame-house-file__icon">
-                            <img src="/wp-content/uploads/2023/01/icon-model.png" />
-                          </div>
-                          <a href="<?php echo $item['model']['url'] ?>" class="frame-house-file__name" target="_blank">
-                            загрузить 3D модель sketchup
-                          </a>
-                        </div>
+                  <div class="frame-house-files">
+                    <div class="frame-house-file">
+                      <div class="frame-house-file__icon">
+                        <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
                       </div>
+                      <a href="<?php the_field('specification'); ?>" class="frame-house-file__name" target="_blank">
+                        загрузить спецификацию
+                      </a>
+                    </div>
+                    <div class="frame-house-file">
+                      <div class="frame-house-file__icon">
+                        <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
+                      </div>
+                      <a href="<?php the_field('estimate'); ?>" class="frame-house-file__name" target="_blank">
+                        загрузить смету
+                      </a>
+                    </div>
+                    <div class="frame-house-file">
+                      <div class="frame-house-file__icon">
+                        <img src="/wp-content/uploads/2023/01/icon-model.png" />
+                      </div>
+                      <a href="<?php the_field('model'); ?>" class="frame-house-file__name" target="_blank">
+                        загрузить 3D модель sketchup
+                      </a>
                     </div>
                   </div>
                 </div>
-              <?php endforeach; ?>
+              </div>
             </div>
-          <?php endif; ?>
+          </div>
         </div>
       </div>
 

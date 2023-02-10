@@ -60,7 +60,7 @@ $sections = new WP_Query([
                     <div class="frame-house-layout__left">
                       <div class="frame-house-image">
                         <a href="<?php the_permalink() ?>">
-                          <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                          <?php the_post_thumbnail('theme-medium'); ?>
                         </a>
                       </div>
                     </div>
@@ -72,7 +72,10 @@ $sections = new WP_Query([
                         <?php the_title() ?>
                       </a>
                       <div class="frame-house-details__desc">
-                        <?php echo $item['desc'] ?>
+                        Высота потолка <?php the_field('ceiling_height'); ?> м<br />
+                        Площадь застройки <?php the_field('building_area'); ?> м²<br />
+                        Площадь помещений <?php the_field('premises_area'); ?> м²<br />
+                        Код продукта <?php the_field('product_code'); ?>
                       </div>
                     </div>
 
