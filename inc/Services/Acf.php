@@ -41,7 +41,7 @@ class Acf implements Service
               'name'              => 'files',
               'title'             => __('Files'),
               'description'       => __('A custom files block.'),
-              'render_callback'   => 'partials/block/content-files.php',
+              'render_template'   => 'partials/block/content-files.php',
               'category'          => 'formatting',
               'icon'              => 'admin-comments',
               'keywords'          => array('files', 'quote'),
