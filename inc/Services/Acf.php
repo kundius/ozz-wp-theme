@@ -35,9 +35,9 @@ class Acf implements Service
 
         add_action('acf/init', function() {
           // check function exists
-          if (function_exists('register_block_type')) {
+          if (function_exists('acf_register_block_type')) {
             // register a testimonial block
-            register_block_type(array(
+            acf_register_block_type(array(
               'name'              => 'files',
               'title'             => __('Files'),
               'description'       => __('A custom files block.'),
