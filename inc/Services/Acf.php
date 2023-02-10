@@ -34,17 +34,24 @@ class Acf implements Service
         ));
 
         add_action('acf/init', function() {
-          // check function exists
           if (function_exists('acf_register_block_type')) {
-            // register a testimonial block
             acf_register_block_type(array(
               'name'              => 'files',
               'title'             => __('Files'),
               'description'       => __('A custom files block.'),
               'render_template'   => 'partials/block/content-files.php',
               'category'          => 'formatting',
-              'icon'              => 'admin-comments',
+              'icon'              => 'admin-welcome-widgets-menus',
               'keywords'          => array('files', 'quote'),
+            ));
+            acf_register_block_type(array(
+              'name'              => 'listing',
+              'title'             => __('Listing'),
+              'description'       => __('A custom listing block.'),
+              'render_template'   => 'partials/block/content-listing.php',
+              'category'          => 'formatting',
+              'icon'              => 'admin-welcome-widgets-menus',
+              'keywords'          => array('listing', 'quote'),
             ));
           }
         });
