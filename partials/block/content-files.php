@@ -1,7 +1,7 @@
 <?php if ($files = get_field('files')): ?>
   <div class="catallog-file-list">
     <div class="file-list">
-      <?php foreach ($filelist as $item): ?>
+      <?php foreach ($files as $item): ?>
         <div class="file-item">
           <?php if ($item['icon']): ?>
             <div class="file-item__icon">
