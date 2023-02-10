@@ -33,10 +33,10 @@ $frameHouses = new WP_Query([
               <?php the_title() ?>
             </a>
             <div class="frame-house-details__desc">
-              Высота потолка <?php the_field('ceiling_height'); ?> м<br />
-              Площадь застройки <?php the_field('building_area'); ?> м²<br />
-              Площадь помещений <?php the_field('premises_area'); ?> м²<br />
-              Код продукта <?php the_field('product_code'); ?>
+              Высота потолка <?php the_field('ceiling_height', get_the_ID()); ?> м<br />
+              Площадь застройки <?php the_field('building_area', get_the_ID()); ?> м²<br />
+              Площадь помещений <?php the_field('premises_area', get_the_ID()); ?> м²<br />
+              Код продукта <?php the_field('product_code', get_the_ID()); ?>
             </div>
           </div>
 
@@ -45,7 +45,7 @@ $frameHouses = new WP_Query([
               <div class="frame-house-file__icon">
                 <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
               </div>
-              <a href="<?php the_field('specification'); ?>" class="frame-house-file__name" target="_blank">
+              <a href="<?php the_field('specification', get_the_ID()); ?>" class="frame-house-file__name" target="_blank">
                 загрузить спецификацию
               </a>
             </div>
@@ -53,7 +53,7 @@ $frameHouses = new WP_Query([
               <div class="frame-house-file__icon">
                 <img src="/wp-content/uploads/2023/01/icon-pdf.png" />
               </div>
-              <a href="<?php the_field('estimate'); ?>" class="frame-house-file__name" target="_blank">
+              <a href="<?php the_field('estimate', get_the_ID()); ?>" class="frame-house-file__name" target="_blank">
                 загрузить смету
               </a>
             </div>
@@ -61,7 +61,7 @@ $frameHouses = new WP_Query([
               <div class="frame-house-file__icon">
                 <img src="/wp-content/uploads/2023/01/icon-model.png" />
               </div>
-              <a href="<?php the_field('model'); ?>" class="frame-house-file__name" target="_blank">
+              <a href="<?php the_field('model', get_the_ID()); ?>" class="frame-house-file__name" target="_blank">
                 загрузить 3D модель sketchup
               </a>
             </div>
