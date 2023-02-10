@@ -42,7 +42,6 @@ class Acf implements Service
               'description'       => __('A custom files block.'),
               'render_template'   => 'partials/block/content-files.php',
               'category'          => 'formatting',
-              'icon'              => 'default',
               'keywords'          => array('files', 'quote'),
             ));
             acf_register_block_type(array(
@@ -52,7 +51,6 @@ class Acf implements Service
               'description'       => __('A custom listing block.'),
               'render_template'   => 'partials/block/content-listing.php',
               'category'          => 'formatting',
-              'icon'              => 'default',
               'keywords'          => array('listing', 'quote'),
             ));
             acf_register_block_type(array(
@@ -62,8 +60,16 @@ class Acf implements Service
               'description'       => __('A custom catalog block.'),
               'render_template'   => 'partials/block/content-catalog.php',
               'category'          => 'formatting',
-              'icon'              => 'default',
               'keywords'          => array('catalog', 'quote'),
+            ));
+            acf_register_block_type(array(
+              'name'              => 'frame-house',
+              'mode'              => 'edit',
+              'title'             => __('Frame House'),
+              'description'       => __('A custom frame house block.'),
+              'render_template'   => 'partials/block/content-frame-house.php',
+              'category'          => 'formatting',
+              'keywords'          => array('frame-house', 'quote'),
             ));
           }
         });
