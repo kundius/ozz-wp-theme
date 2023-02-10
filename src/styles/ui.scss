@@ -542,10 +542,6 @@ body {
   line-height: 26px;
   color: #000;
 
-  * + * {
-    margin-top: 1.5em;
-  }
-
   h2 {
     font-size: 30px;
     line-height: 36px;
@@ -852,6 +848,8 @@ body {
   display: block;
 }
 
+.ui-content a.file-item__name,
+a.file-item__name,
 .file-item__name {
   display: block;
   color: #4e4e53;
@@ -861,6 +859,11 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   margin: 12px 0;
+
+  &:hover {
+    color: #4e4e53;
+    background: none;
+  }
 
   @include below(sm) {
     font-size: 16px;
