@@ -55,6 +55,16 @@ class Acf implements Service
               'icon'              => 'admin-default',
               'keywords'          => array('listing', 'quote'),
             ));
+            acf_register_block_type(array(
+              'name'              => 'catalog',
+              'mode'              => 'edit',
+              'title'             => __('Catalog'),
+              'description'       => __('A custom catalog block.'),
+              'render_template'   => 'partials/block/content-catalog.php',
+              'category'          => 'formatting',
+              'icon'              => 'admin-default',
+              'keywords'          => array('catalog', 'quote'),
+            ));
           }
         });
     }
