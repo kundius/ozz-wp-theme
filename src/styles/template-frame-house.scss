@@ -84,6 +84,7 @@
   background-color: #9b9ba2;
   padding: 2px 17px 5px;
   text-decoration: none;
+  display: block;
 
   @include below(sm) {
     font-size: 15px;
