@@ -233,6 +233,10 @@
   }
 }
 
+.frame-house {
+  margin-top: 60px;
+}
+
 .frame-house-row + .frame-house-row {
   margin-top: 40px;
 
@@ -380,6 +384,8 @@
   display: block;
 }
 
+.ui-content a.frame-house-file__name,
+a.frame-house-file__name,
 .frame-house-file__name {
   display: block;
   color: #4e4e53;
@@ -388,6 +394,12 @@
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
+
+
+  &:hover {
+    color: #4e4e53;
+    background: none;
+  }
 
   @include below(sm) {
     font-size: 15px;
