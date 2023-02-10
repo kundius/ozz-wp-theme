@@ -59,7 +59,9 @@ $sections = new WP_Query([
                   <?php if (has_post_thumbnail()): ?>
                     <div class="frame-house-layout__left">
                       <div class="frame-house-image">
-                        <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                        <a href="<?php the_permalink() ?>">
+                          <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                        </a>
                       </div>
                     </div>
                   <?php endif; ?>
@@ -114,7 +116,9 @@ $sections = new WP_Query([
                 <div class="catalog-item">
                   <?php if (has_post_thumbnail()): ?>
                     <div class="catalog-item__image">
-                      <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                      <a href="<?php the_permalink() ?>">
+                        <?php the_post_thumbnail($post->ID, 'theme-medium'); ?>
+                      </a>
                     </div>
                   <?php endif; ?>
                   <div class="catalog-item__body">
