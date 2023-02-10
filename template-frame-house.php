@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Каркасные дома
+Template Name: Каркасный дом
  */
 ?>
 <!DOCTYPE html>
