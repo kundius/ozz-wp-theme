@@ -51,9 +51,9 @@ $sections = new WP_Query([
             <?php the_content() ?>
           </div>
 
-          <?php if ($frameHouse->have_posts()): ?>
+          <?php if ($frameHouses->have_posts()): ?>
           <div class="frame-house">
-            <?php while ($frameHouse->have_posts()): $frameHouse->the_post(); ?>
+            <?php while ($frameHouses->have_posts()): $frameHouses->the_post(); ?>
               <div class="frame-house-row">
                 <div class="frame-house-layout">
                   <?php if (has_post_thumbnail()): ?>
