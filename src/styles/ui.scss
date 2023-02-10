@@ -865,6 +865,10 @@ a.file-item__name,
     background: none;
   }
 
+  &:visited {
+    color: #4e4e53;
+  }
+
   @include below(sm) {
     font-size: 16px;
     margin: 4px 0;
