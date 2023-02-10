@@ -37,20 +37,22 @@ class Acf implements Service
           if (function_exists('acf_register_block_type')) {
             acf_register_block_type(array(
               'name'              => 'files',
+              'mode'              => 'edit',
               'title'             => __('Files'),
               'description'       => __('A custom files block.'),
               'render_template'   => 'partials/block/content-files.php',
               'category'          => 'formatting',
-              'icon'              => 'admin-welcome-widgets-menus',
+              'icon'              => 'admin-default',
               'keywords'          => array('files', 'quote'),
             ));
             acf_register_block_type(array(
               'name'              => 'listing',
+              'mode'              => 'edit',
               'title'             => __('Listing'),
               'description'       => __('A custom listing block.'),
               'render_template'   => 'partials/block/content-listing.php',
               'category'          => 'formatting',
-              'icon'              => 'admin-welcome-widgets-menus',
+              'icon'              => 'admin-default',
               'keywords'          => array('listing', 'quote'),
             ));
           }
