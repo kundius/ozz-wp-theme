@@ -1,0 +1,14 @@
+{
+    "name": "acf/files",
+    "title": "Files",
+    "description": "A custom files block.",
+    "style": [ "file:./files.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["files", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "files.php"
+    },
+    "align": "full"
+}
